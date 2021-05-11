@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import { Row, Col, Space } from "antd";
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import AppRouter from "./components/AppRouter";
+import Nav from "./components/Nav";
 
 function App() {
+  const style = { padding: "8px 0" };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Row>
+        <Col span={8} offset={8}>
+          <Col style={style}>
+            <Nav />
+          </Col>
+          <Col>
+            <AppRouter />
+          </Col>
+        </Col>
+      </Row>
+    </BrowserRouter>
   );
 }
 
