@@ -5,7 +5,7 @@ import TableComponent from "../../components/TableComponent";
 
 const Favorites = () => {
   const taskStore = useSelector((state: RootStateOrAny) => state.task);
-  const taskFavorites = taskStore.tasks.filter(
+  const taskFavorites = taskStore.tasks && taskStore.tasks.filter(
     (element: any) => element.favorite
   );
 
@@ -24,7 +24,7 @@ const Favorites = () => {
 
   return (
     <Row>
-      <Col>
+      <Col span={24} >
         <Spin spinning={taskStore.fetching}>
           <TableComponent columns={columns} data={taskFavorites} />
         </Spin>

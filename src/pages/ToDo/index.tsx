@@ -142,7 +142,7 @@ const ToDo = () => {
   return (
     <Fragment>
       <Row>
-        <Col>
+        <Col span={24}>
           <Row>
             <Col>
               <Space size={10}>
@@ -173,7 +173,7 @@ const ToDo = () => {
           </Row>
           <Divider plain></Divider>
           <Row>
-            <Col>
+            <Col span={24}>
               <Spin spinning={taskStore.fetching}>
                 <TableComponent
                   columns={columns}
