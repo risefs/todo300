@@ -3,7 +3,6 @@ import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
 import "./firebase";
 import generateStore from "./redux/store";
-// import AppRouter from "./components/AppRouter";
 import App from './App';
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
